@@ -23,7 +23,7 @@ export default function Contact() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5005/contact", data)
+      .post(import.meta.env.VITE_BACKEND_URL, data)
       .then((res) => {
         console.info(res);
       })
